@@ -1,0 +1,116 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5em;
+}
+
+
+html {
+  background: radial-gradient(ellipse at center, #ffffff 60%, #666666 100%);
+  overflow: hidden;
+}
+
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.parent div {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+#bg {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+svg {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.01);
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+.outer {
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  grid-row-start: 1;
+  grid-column-start: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .outer {
+    margin-bottom: 20%;
+  }
+}
+
+
+body {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  justify-content: center;
+}
+
+.content {
+
+  margin: 20%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.centerflex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.inner-content {
+  margin: 0;
+  width: 40%;
+  min-width: 300px;
+  //padding: 20px 76px 30px 76px;
+  background: white;
+  color: black;
+  z-index: 100;
+}
+
+img {
+  width: 100%;
+}
+
+.label {
+  font-variant: small-caps;
+}
+
+section {
+  display: table;
+  width: 100%;
+  padding: 20px;
+}
+
+section>* {
+  display: table-row;
+}
+
+section .col {
+  display: table-cell;
+}
+
+section .spacer {
+  width: 5px;
+}
+
+}
