@@ -43,11 +43,7 @@ svg {
   grid-column-start: 1;
 }
 
-@media screen and (max-width: 600px) {
-  .outer {
-    margin-bottom: 20%;
-  }
-}
+
 
 
 body {
