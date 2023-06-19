@@ -35,7 +35,7 @@ html {
 }
 
 svg {
-  padding: 50px;
+  /* padding: 50px; */
   background-color: rgba(0, 0, 0, 0.01);
   grid-row-start: 1;
   grid-column-start: 1;
