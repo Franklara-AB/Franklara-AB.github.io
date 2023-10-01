@@ -75,5 +75,16 @@ img {
 }
 
 section {
-  padding: 10px;
+  display: table;
+  width: 100%;
+  padding: 20px;
+}
+section>* {
+  display: table-row;
+}
+section .col {
+  display: table-cell;
+}
+section .spacer {
+  width: 5px;
 }
