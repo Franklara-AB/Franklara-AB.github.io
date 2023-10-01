@@ -5,74 +5,65 @@
   line-height: 1.5em;
 }
 
+html,
 body {
-   padding: 0px;
-   margin: 0px;
+	height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-
-html {
-  background: radial-gradient(ellipse at center, #ffffff 60%, #666666 100%);
-  overflow: hidden;
+#parent {
+  height: 100%;
+  min-height: 100%;
+	display: grid;
+	/*flex-direction: grid;*/
+  background-color: red;
 }
 
-
-.parent {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.parent div {
-  padding: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  grid-row-start: 1;
-  grid-column-start: 1;
+#parent > * {
+  grid-area: 1 / 1;
 }
 
 #bg {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: rgba(255, 255, 255, 0.85);
+  height: 100%;
+  min-height: 100%;
+  width:100%;
+	display: grid;
+	/*flex-direction: grid;*/
+  background-color: transparent;
+  
 }
 
-svg {
-  /* padding: 50px; */
-  background-color: rgba(0, 0, 0, 0.0);
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-
-.outer {
-  /* padding: 50px; */
-  background-color: rgba(0, 0, 0, 0);
-  grid-row-start: 1;
-  grid-column-start: 1;
-}
-
-.content {
-
-  margin: 20%;
+#content {
+  height: 100%;
+  min-height: 100%;
+  width:100%;
+	align-self: end;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+	/*flex-direction: grid;*/
+  background-color: transparent;
+  z-index:1000;
+  
   background-color: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0;
-  padding-top: 0;
-}
 
-.centerflex {
-  align-items: center;
-  display: flex;
-  justify-content: center;
 }
 
 .inner-content {
   margin: 0;
   width: 40%;
   min-width: 300px;
-  background: white;
+  background-color: rgba(255,255,255,0.6);
   color: black;
   z-index: 100;
+  margin-bottom: 10%;
 }
 
 img {
@@ -84,21 +75,5 @@ img {
 }
 
 section {
-  display: table;
-  width: 100%;
-  padding: 20px;
-}
-
-section>* {
-  display: table-row;
-}
-
-section .col {
-  display: table-cell;
-}
-
-section .spacer {
-  width: 5px;
-}
-
+  padding: 10px;
 }

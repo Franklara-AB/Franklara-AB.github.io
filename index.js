@@ -1,4 +1,4 @@
-var refreshDuration = 10000;
+var refreshDuration = 30000;
 var refreshTimeout;
 var numPointsX;
 var numPointsY;
@@ -100,9 +100,12 @@ function randomize() {
         }
     }
 }
-
+let initialized = false;
 function refresh() {
-    randomize();
+    if (!initialized) {
+        randomize();
+        initialized = true;
+    }
     for (var i = 0; i < document.querySelector('#bg svg').childNodes.length; i++) {
         var polygon = document.querySelector('#bg svg').childNodes[i];
         var animate = polygon.childNodes[0];

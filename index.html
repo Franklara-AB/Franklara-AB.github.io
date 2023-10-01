@@ -7,31 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Digital tranformation">
     <link rel="stylesheet" type="text/css" href="index.css">
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.birds.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.waves.min.js"></script>
 
 </head>
 <body>
-    <div id="bg">
-        <div class="outer centerflex">
-            <div class="content">
-                <div class="inner-content">
-                    <img src="img/franklara.png" />
-                    <section>
-                        <div class="row">
-                            <div class="col"><span class="label">E-mail:</span></div>
-                            <div class="col spacer"></div>
-                            <div class="col"><a href="mailto:deanandrewwoods@hotmail.com">Dean Woods</a></div>
-                        </div>
-                        <div class="row">
-                            <div class="col"><span class="label">Phone:</span></div>
-                            <div class="col spacer"></div>
-                            <div class="col"><a href="tel:+46 721 83 55 55">+46 721 83 55 55</a></div>
-                        </div>
-                    </section>
-                </div>
+    <div id="parent">
+        <div id="bg"></div>
+        <div id="content">
+            <div class="inner-content">
+                <img src="img/franklara.png" />
+                <section>
+                    <div class="row">
+                        <div class="col"><span class="label">E-mail:</span></div>
+                        <div class="col spacer"></div>
+                        <div class="col"><a href="mailto:deanandrewwoods@hotmail.com">Dean Woods</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><span class="label">Phone:</span></div>
+                        <div class="col spacer"></div>
+                        <div class="col"><a href="tel:+46 721 83 55 55">+46 721 83 55 55</a></div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
 </body>
-
+<script>
+    if (Math.floor(Math.random() * 4) >= 2 ) {
+        VANTA.WAVES({
+            el: "#bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0xefefef,
+            color1: 0x3cff,
+            color2: 0x495bff,
+            birdSize: 1.90,
+            speedLimit: 2.00,
+            separation: 30.00,
+            alignment: 19.00,
+            cohesion: 6.00,
+            quantity: 3.00
+            })
+    } else {
+        VANTA.BIRDS({
+            el: "#bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: true,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            backgroundColor: 0xefefef,
+            color1: 0x3cff,
+            color2: 0x495bff,
+            birdSize: 1.90,
+            speedLimit: 2.00,
+            separation: 30.00,
+            alignment: 19.00,
+            cohesion: 6.00,
+            quantity: 3.00
+            })
+    }
+    
+</script>
 </html>
