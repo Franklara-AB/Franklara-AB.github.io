@@ -1,2 +1,2 @@
 # franklara.github.io
-Web
+Website
